@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User'); //order of require statements can result in errors in code, User file is where the class is being defined so it must be first
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
